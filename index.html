@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Task Manager</h1>
+
+<div class="form-container">
+    <input type="text" id="title" placeholder="Task title">
+
+    <select id="priority">
+        <option value="LOW">LOW</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="HIGH">HIGH</option>
+    </select>
+
+    <button onclick="addTask()">Add Task</button>
+</div>
+
+<hr>
+
+<div class="controls">
+    <select id="filterPriority">
+        <option value="">Filter by Priority</option>
+        <option value="LOW">LOW</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="HIGH">HIGH</option>
+    </select>
+
+    <select id="filterStatus">
+        <option value="">Filter by Status</option>
+        <option value="ACTIVE">ACTIVE</option>
+        <option value="COMPLETED">COMPLETED</option>
+    </select>
+
+    <button onclick="applyFilters()">Apply Filter</button>
+    <button onclick="sortByPriority()">Sort by Priority</button>
+</div>
+
+<ul id="taskList"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>
